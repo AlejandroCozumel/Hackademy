@@ -40,9 +40,7 @@ document.getElementById('upload').onclick = function(){
             Name: ImgName,
             Link: ImgURL
         });
-        alert('Image added succesfully')
-        }
-        );
+        });
     });
 }
 
