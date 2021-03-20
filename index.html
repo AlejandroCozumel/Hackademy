@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Yanone+Kaffeesatz:wght@500&display=swap"
+        rel="stylesheet">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-storage.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <title>McCopy's W/Firebase</title>
+</head>
+
+<body>
+    <!-- NOTIFICATION START -->
+    <h2 class="notifications fillall">Llena todos los campos.</h2>
+    <h2 class="notifications inserted">Añadido exitosamente</h2>
+    <h2 class="notifications updated">Actualizado exitosamente</h2>
+    <!-- NOTIFICATION END -->
+
+    <!-- FORM CONTAINER START -->
+
+    <div class="container">
+        <form action="/" method="post" enctype="multipart/form-data">
+            <h1 class="logo">McCopy's</h1>
+            <select name="category">
+                <option value="starters">Entrada</option>
+                <option value="main">Plato fuerte</option>
+                <option value="side">Guarniciones</option>
+                <option value="dessert">Postres</option>
+            </select>
+            <input type="text" name="title" placeholder="Titulo">
+            <input type="number" name="price" placeholder="Precio $"> <br>
+            Nombre de la imagen: <br> <input type="text" id="namebox" placeholder="Ingresa nombre"><br> <br>
+            <img id="myimg"> <label id="UpProgress"></label> <br> <br>
+
+            <input type="file" name="image" id="select">
+            <input type="submit" name="submit" value="Añadir" id="upload">
+        </form>
+    </div>
+    <!-- FORM END -->
+
+    <!-- MENU START -->
+    
+    <div class="menu" id="menu">
+        <span class="main-image">
+            <h1>McCopy's</h1>
+            <img src="img/logo.svg" alt="">
+        </span>
+        <h2>Entrada</h2>
+        <div class="starters"></div>
+        <h2>Plato fuerte</h2>
+        <div class="main"></div>
+        <h2>Guarniciones</h2>
+        <div class="side"></div>
+        <h2>Postres</h2>
+        <div class="dessert"></div>
+        <!-- MENU END -->
+
+        <div class="cards">
+            <div class="product-box">
+                <img class="image" src="img/payment.svg">
+                <div class="title">Accept Cards</div>
+                <div class="price">We accept all the major cards</div>
+            </div>
+            <div class="product-box">
+                <img class="image" src="img/order.svg">
+                <div class="title">Online Bookings</div>
+                <div class="price">We app to make your order</div>
+            </div>
+            <div class="product-box">
+                <img class="image" src="img/delivery.svg">
+                <div class="title">Home Delivery</div>
+                <div class="price">Free delivery</div>
+            </div>
+            <div class="product-box">
+                <img class="image" src="img/location.svg">
+                <div class="title">Best Locations</div>
+                <div class="price">Always close to you</div>
+            </div>
+        </div>
+        <div class="signature-menu">
+            <h3>Explore Signature Menu</h3>
+            <button class="order">Order Now</button>
+            <button class="view">View Menu</button>
+        </div>
+        <div class="footer">
+            <a href="#">Copyright</a>
+            <a href="#">Terms of service</a>
+            <a href="#">Privacy policy</a>
+            <div class="social-wrapper">
+                <a href="#" target="_blank" class="sm-link"><i class="ion-social-facebook"></i></a>
+                <a href="#" target="_blank" class="sm-link"><i class="ion-social-instagram"></i></a>
+                <a href="#" target="_blank" class="sm-link"><i class="ion-social-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- UPDATE START -->
+    <div id="for-update">
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <h2 class="logo">McCopy's</h2>
+            <input type="text" style="opacity: 0;" name="id">
+            <input type="text" name="newtitle" placeholder="Nuevo titulo">
+            <input type="number" name="newprice" placeholder="$ ingresa precio">
+            <input type="submit" name="update" value="Actualizar">
+        </form>
+        <h2 id="close-update">X</h2>
+    </div>
+    <!-- UPDATE END -->
+
+    <script src="menu.js"></script>
+    <script src="firebase.js"></script>
+</body>
+
+</html>
