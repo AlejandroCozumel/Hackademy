@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/229f4fca43.js" crossorigin="anonymous"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Yanone+Kaffeesatz:wght@500&display=swap"
@@ -53,11 +60,13 @@
     <!-- FORM END -->
 
     <!-- MENU START -->
-    
+
     <div class="menu" id="menu">
         <span class="main-image">
             <h1>McCopy's</h1>
-            <img src="img/logo.svg" alt="">
+            <img src="img/logo.svg" alt="imagen principal">
+            <button class="order">Order Now</button>
+            <button class="view">View Menu</button>
         </span>
         <h2>Entrada</h2>
         <div class="starters"></div>
@@ -67,7 +76,41 @@
         <div class="side"></div>
         <h2>Postres</h2>
         <div class="dessert"></div>
+
         <!-- MENU END -->
+        <h4>Especials</h4>
+        <div class="owl-carousel owl-theme">
+            <div class="product-box">
+                <h3 class="title">&#127828 Best Food</h3>
+                    <h2 class="price">&#128666 Free delivery</h2>
+                    <img class="image-carousel" src="img/1.jpg">
+            </div>
+            <div class="product-box">
+                <h3 class="title">&#127828 Best Food</h3>
+                    <h2 class="price">&#128666 Free delivery</h2>
+                    <img class="image-carousel" src="img/2.jpg">
+            </div>
+            <div class="product-box">
+                <h3 class="title">&#127828 Best Food</h3>
+                    <h2 class="price">&#128666 Free delivery</h2>
+                    <img class="image-carousel" src="img/3.jpg">
+            </div>
+            <div class="product-box">
+                <h3 class="title">&#127828 Best Food</h3>
+                    <h2 class="price">&#128666 Free delivery</h2>
+                    <img class="image-carousel" src="img/4.jpg">
+            </div>
+            <div class="product-box">
+                <h3 class="title">&#127828 Best Food</h3>
+                    <h2 class="price">&#128666 Free delivery</h2>
+                    <img class="image-carousel" src="img/5.jpg">
+            </div>
+            <div class="product-box">
+                <h3 class="title">&#127828 Best Food</h3>
+                    <h2 class="price">&#128666 Free delivery</h2>
+                    <img class="image-carousel" src="img/6.jpg">
+            </div>
+        </div>
 
         <div class="cards">
             <div class="product-box">
@@ -125,6 +168,29 @@
 
     <script src="menu.js"></script>
     <script src="firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>

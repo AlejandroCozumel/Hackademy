@@ -36,6 +36,14 @@ h1{
     justify-content: center;
 }
 
+.owl-theme .product-box{
+    margin-bottom: 2%;
+}
+
+.image-carousel{
+    border-radius: 20px;
+}
+
 /* FORM */
 img{
     height: 200px;
@@ -202,6 +210,12 @@ a{
 
 h3{
     color: #E79289;
+}
+
+h4{
+    color: #E79289;
+    margin-left: 45%;
+    font-size: 2.6rem
 }
 
 .delete, .update{
